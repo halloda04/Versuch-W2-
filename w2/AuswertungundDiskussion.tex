@@ -1,1 +1,91 @@
 \section{Auswertung}
+
+\subsection{Teil 1, ebullioskopische Konstante}
+
+it Hilfe der Gleichung \ref{eq:K} kann die ebullioskopische Konstante bestimmt werden. Für die Siedetemperatur des destilliertem Wasser wurde eine Temperatur von
+$98,6 \pm 0,05°C$ gemessen. Mit den Konstanten entnommen aus [Quellen] ergibt sich für $K$
+
+\begin{equation}
+K = (0,509 \pm 0,0025)\frac{K \cdot kg}{mol}
+\end{equation}
+
+Wobei der Fehler durch:
+
+\begin{equation}
+    \Delta K = \pm \left( \left| \frac{\text{\partial K}}{\text{\partial} T_0} \Delta T_0 \right| \right) = 
+    \pm \frac{2M_A R T_0 \Delta T_0}{\Lambda_A}
+\end{equation}
+gegeben ist. Die Literaturwerte als Fehlerfrei angenommen. Für den Fehler der Temperatur wurde der Fehler des Thermometers welcher sich bei $100°C$ auf etwa $\pm 0,9°C$ beläuft mit dem Ablesefehler von $\pm0,1°C$ addiert.  Auch wenn sich der Literaturwert von $0,513$ knapp nicht in der Fehlerschranke befindet, ist der relative Fehler von $0,8 \%$ recht gering und die Bestimmung der ebullioskopische Konstante kann als erfolgreich gewertet werden.
+
+
+\subsection{Teil 2, Konzentration Harnstoff}
+Für den Siedepunkt des Harnstoffes wurde ein Wert von $T_H$ von $99,2 \pm 0,05°C$ gemessen. Es befanden sich, vor dem Kochvorgang
+$38,2  \pm 0,2$g Harnstofflösung in dem Gefäß. Der Fehler hier ist durch Summe der Fehler (Des leeren  und des vollen Gefäßes) gegeben. Durch den Siedeprozess wurden $0,5 \pm 0,2$g Wasser eingeschleppt. Der Fehler berechnet sich hier genauso wie bei der Harnstofflösung. Die Kozentration $C$ welche durch
+
+\begin{equation}
+C = \frac{m_B}{m_A}
+\end{equation}
+
+gegeben ist. Wobei $m_B$ die Masse des Harnstoffes und $m_A$ die ursprüngliche Menge an Wasser im Glas beschreibt.$M_B$ ist die Molaremasse des Harnstoffes. $m_e$ ist die Masse des eingeschleppten Wassers. Es gilt nach Gleichung \ref{eq:dT}
+
+\begin{equation}
+m_{Ae} = \frac{K \cdot m_{B}}{\Delta T  M_B} - m_e
+\end{equation}
+Mit
+
+\begin{equation}
+m_{nachher} = m_{vorher} + m_e
+\end{equation}
+
+Setzt man dies in 
+\begin{equation}
+m_{B} = m_{vorher} - m{A}
+\end{equation}
+
+ein. Erhält man
+\begin{equation}
+m_B =m_{vorher} - \frac{K \cdot m_{B}}{\Delta T  M_B} - m_e
+\end{equation}
+
+
+
+
+\begin{equation}
+m_b = \frac{(\Delta T \cdot M_B) (\cdot m_{vorher} -m_e)}{K}
+\end{equation}
+
+Das ergibt für die Konzentration
+
+\begin{equation}
+C = \frac{(\Delta T \cdot M_B) (\cdot m_{vorher} -m_e)}{K \cdot m_{vorher}} = \frac{\Delta T \cdot M_B}{K} \left( 1 - \frac{m_e}{m_\text{vorher}} \right) = (7,1 \pm 10,7)\%
+\end{equation}
+
+Der Fehler der Konzentration ist gegeben durch
+
+\begin{equation}
+\begin{split}
+\Delta C &= \pm \left| \frac{\partial C}{\partial \Delta T} \right| \cdot \Delta(\Delta T) 
++ \left| \frac{\partial C}{\partial m_e} \right| \cdot \Delta m_e 
++ \left| \frac{\partial C}{\partial m_\text{vorher}} \right| \cdot \Delta m_\text{vorher} \\
+&=\pm \frac{M_B}{K} \Bigg[ 
+\left( 1 - \frac{m_e}{m_\text{vorher}} \right) \Delta (\Delta T) 
++ \Delta T \left( \frac{\Delta m_e}{m_\text{vorher}} + \frac{m_e}{m_\text{vorher}^2} \Delta m_\text{vorher} \right)
+\Bigg]
+\end{split}
+\end{equation}
+
+da die Literaturwerte als nicht Fehlerbehaftet angesehen wurden. Dies ist ein sehr signifikanter Fehler von $150\%$ Was vorallem von den Fehler der Siedepunkterhöhung kommt, welcher wiederum so groß ist, da das verwendete Thermometer sehr ungenau misst. Zudem ist die Näherung $ \frac{p}{p_0} \approx \frac{n_B}{n_A}$ welche für die Herleitung der Gleichung \ref{eq:dT} verwendet wurde hier  nicht mehr gültig da mit einem Masseanteil von $7,1 \%$ nicht mehr $m_A$ \gg $m_B$ gilt.
+
+\subsection{Teil 3, Dissoziationsgrad}
+
+Mit Gleichung \ref{eq:alpha} lässt sich der Dissoziationsgrad der Natriumchloridlösungen bestimmen. Es wurden zwei Messungen durchgeführt, einem mit einer Konzentration von 10\% und eimal mit 20\%. Die Masse des 10\%-igen NaCL = $m_B = C \cdot m_{vorher} = (4,05 \pm 0,2)g$ wobei sich $m_v = (40,5 \pm 0,2)g$ aus der Masse des leeren Gefäßes und des gefüllten Gefäßes ergibt. Die Masse des Lösungsmittels samt eingeschlepptem Wasser kann mit
+
+\begin{equation}
+m_A = (1 - C)\cdot m_{vorher} + m_{nacher} - m{vorher} = 37,05 FEHLER
+\end{equation}
+
+berechnet werden. Der Dissozieationsgrad ist somit durch
+
+\begin{equation}
+\alpha = \frac{\frac{\Delta T m_A \cdot M_B}{K m_B}-1}{z-1}
+\end{equation}
