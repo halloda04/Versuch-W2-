@@ -3,7 +3,7 @@
 \subsection{Teil 1, ebullioskopische Konstante}
 
 it Hilfe der Gleichung \ref{eq:K} kann die ebullioskopische Konstante bestimmt werden. Für die Siedetemperatur des destilliertem Wasser wurde eine Temperatur von
-$98,6 \pm 0,05°C$ gemessen. Mit den Konstanten entnommen aus [Quellen] ergibt sich für $K$
+$98,6 \pm 0,05°C$ gemessen. Mit den Konstanten entnommen aus \cite{Tipler} ergibt sich für $K$
 
 \begin{equation}
 K = (0,509 \pm 0,0025)\frac{K \cdot kg}{mol}
@@ -20,7 +20,7 @@ gegeben ist. Die Literaturwerte als Fehlerfrei angenommen. Für den Fehler der T
 
 \subsection{Teil 2, Konzentration Harnstoff}
 Für den Siedepunkt des Harnstoffes wurde ein Wert von $T_H$ von $99,2 \pm 0,05°C$ gemessen. Es befanden sich, vor dem Kochvorgang
-$38,2  \pm 0,2$g Harnstofflösung in dem Gefäß. Der Fehler hier ist durch Summe der Fehler (Des leeren  und des vollen Gefäßes) gegeben. Durch den Siedeprozess wurden $0,5 \pm 0,2$g Wasser eingeschleppt. Der Fehler berechnet sich hier genauso wie bei der Harnstofflösung. Die Kozentration $C$ welche durch
+$m_v = 38,2  \pm 0,2$g Harnstofflösung in dem Gefäß. Der Fehler hier ist durch Summe der Fehler (Des leeren  und des vollen Gefäßes) gegeben. Durch den Siedeprozess wurden $0,5 \pm 0,2$g Wasser eingeschleppt. Der Fehler berechnet sich hier genauso wie bei der Harnstofflösung. Die Kozentration $C$ welche durch
 
 \begin{equation}
 C = \frac{m_B}{m_A}
@@ -34,30 +34,30 @@ m_{Ae} = \frac{K \cdot m_{B}}{\Delta T  M_B} - m_e
 Mit
 
 \begin{equation}
-m_{nachher} = m_{vorher} + m_e
+m_{n} = m_{v} + m_e
 \end{equation}
 
 Setzt man dies in 
 \begin{equation}
-m_{B} = m_{vorher} - m{A}
+m_{B} = m_{v} - m{A}
 \end{equation}
 
 ein. Erhält man
 \begin{equation}
-m_B =m_{vorher} - \frac{K \cdot m_{B}}{\Delta T  M_B} - m_e
+m_B =m_{v} - \frac{K \cdot m_{B}}{\Delta T  M_B} - m_e
 \end{equation}
 
 
 
 
 \begin{equation}
-m_b = \frac{(\Delta T \cdot M_B) (\cdot m_{vorher} -m_e)}{K}
+m_b = \frac{(\Delta T \cdot M_B) (\cdot m_{v} -m_e)}{K}
 \end{equation}
 
 Das ergibt für die Konzentration
 
 \begin{equation}
-C = \frac{(\Delta T \cdot M_B) (\cdot m_{vorher} -m_e)}{K \cdot m_{vorher}} = \frac{\Delta T \cdot M_B}{K} \left( 1 - \frac{m_e}{m_\text{vorher}} \right) = (7,1 \pm 10,7)\%
+C = \frac{(\Delta T \cdot M_B) (\cdot m_{vr} -m_e)}{K \cdot m_{v}} = \frac{\Delta T \cdot M_B}{K} \left( 1 - \frac{m_e}{m_\text{v}} \right) = (7,1 \pm 10,7)\%
 \end{equation}
 
 Der Fehler der Konzentration ist gegeben durch
@@ -66,10 +66,10 @@ Der Fehler der Konzentration ist gegeben durch
 \begin{split}
 \Delta C &= \pm \left| \frac{\partial C}{\partial \Delta T} \right| \cdot \Delta(\Delta T) 
 + \left| \frac{\partial C}{\partial m_e} \right| \cdot \Delta m_e 
-+ \left| \frac{\partial C}{\partial m_\text{vorher}} \right| \cdot \Delta m_\text{vorher} \\
++ \left| \frac{\partial C}{\partial m_\text{v}} \right| \cdot \Delta m_v \\
 &=\pm \frac{M_B}{K} \Bigg[ 
-\left( 1 - \frac{m_e}{m_\text{vorher}} \right) \Delta (\Delta T) 
-+ \Delta T \left( \frac{\Delta m_e}{m_\text{vorher}} + \frac{m_e}{m_\text{vorher}^2} \Delta m_\text{vorher} \right)
+\left( 1 - \frac{m_e}{m_v} \right) \Delta (\Delta T) 
++ \Delta T \left( \frac{\Delta m_e}{m_v} + \frac{m_e}{m_v^2} \Delta m_v \right)
 \Bigg]
 \end{split}
 \end{equation}
@@ -77,15 +77,28 @@ Der Fehler der Konzentration ist gegeben durch
 da die Literaturwerte als nicht Fehlerbehaftet angesehen wurden. Dies ist ein sehr signifikanter Fehler von $150\%$ Was vorallem von den Fehler der Siedepunkterhöhung kommt, welcher wiederum so groß ist, da das verwendete Thermometer sehr ungenau misst. Zudem ist die Näherung $ \frac{p}{p_0} \approx \frac{n_B}{n_A}$ welche für die Herleitung der Gleichung \ref{eq:dT} verwendet wurde hier  nicht mehr gültig da mit einem Masseanteil von $7,1 \%$ nicht mehr $m_A$ \gg $m_B$ gilt.
 
 \subsection{Teil 3, Dissoziationsgrad}
+Die Messergebnisse für die NaCl Lösungen in Gramm.
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Messergebnisse}& 10\% & 20\% \\ \hline
+leeres Gefäß      & 64,6 & 64,5 \\ \hline
+vor dem Kochen    & 105,1 & 107,9 \\ \hline
+nach dem Kochen   & 105,7 & 108,7 \\ \hline
+\end{tabular}
+\end{center}
 
-Mit Gleichung \ref{eq:alpha} lässt sich der Dissoziationsgrad der Natriumchloridlösungen bestimmen. Es wurden zwei Messungen durchgeführt, einem mit einer Konzentration von 10\% und eimal mit 20\%. Die Masse des 10\%-igen NaCL = $m_B = C \cdot m_{vorher} = (4,05 \pm 0,2)g$ wobei sich $m_v = (40,5 \pm 0,2)g$ aus der Masse des leeren Gefäßes und des gefüllten Gefäßes ergibt. Die Masse des Lösungsmittels samt eingeschlepptem Wasser kann mit
+
+Mit Gleichung \ref{eq:alpha} lässt sich der Dissoziationsgrad der Natriumchloridlösungen bestimmen. Es wurden zwei Messungen durchgeführt, einem mit einer Konzentration von 10\% und eimal mit 20\%. Die Masse des 10\%-igen NaCL = $m_B = C \cdot m_v = (4,05 \pm 0,2)g$ wobei sich $m_v$ aus der Masse des leeren Gefäßes und des gefüllten Gefäßes ergibt. Mit der gleiche Rechnung ergibt sich für die Masse der $20 \%$-ige Lösung: $(m_B = 8,68 \pm 0,2)$g. samt eingeschlepptem Wasser kann $m_A$ mit
 
 \begin{equation}
-m_A = (1 - C)\cdot m_{vorher} + m_{nacher} - m{vorher} = 37,05 FEHLER
+m_A = (1 - C)\cdot m_v + m_n - m_v
 \end{equation}
 
-berechnet werden. Der Dissozieationsgrad ist somit durch
+berechnet werden. Für 10\%-igen Lösung ergibt sich $m_A = 37,05$ und für die $20 \%$-ige Lösung $m_A = 35,52$.  Der Dissozieationsgrad ist somit durch
 
 \begin{equation}
-\alpha = \frac{\frac{\Delta T m_A \cdot M_B}{K m_B}-1}{z-1}
+\alpha = \frac{\frac{\Delta T \cdot m_A \cdot M_B}{K \cdot m_B}-1}{z-1}
 \end{equation}
+
+gegeben bei der 10\%-igen Lösung wurde ein $\Delta T$ von 1,6°C festgestellt für den Dissoziationsgrad ergibt sich somit $(72,0 \pm 0,78)\%$. Mit gleichem Verfahren ergibt sich bei der 20\%-igen Lösung mit $\alpha = (0,91 \pm 0,98)\%$. Diese Werte ergeben Physikalisch keinen Sinn, da mit zunehmender Konzentration der Dissozieationsgrad  abnehmen sollte nicht zuhnemen. Zudem ist der errechnete Fehler so größ das dass der Wert von $\alpha$ völlig unzuverlässig ist. Eine Unsicherheit von ±0,98\% bei einem Mittelwert von 0,91\% bedeutet, dass der tatsächliche Dissoziationsgrad sogar negativ oder deutlich über 100\% liegen könnte, was physikalisch unmöglich ist. Es könnten mehrere Fehler zu diesem Ergebniss geführt haben. Zum einen ist die Ungenauigkeit des Thermometers sehr groß (siehe Teil 1). Zum anderen ist wie oben auch erläutert die Näherung von $ \frac{p}{p_0} \approx \frac{n_B}{n_A}$ bei einer 20\%-igen Lösung absolut nicht mehr gegeben. Somit ist die hergeleitete Formel nicht mehr auf die 20\% Lösung anwendbar.
